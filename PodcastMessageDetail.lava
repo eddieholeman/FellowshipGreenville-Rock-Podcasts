@@ -8,6 +8,7 @@
 	{% assign videoLink = item | Attribute:'Podcast_Video','RawValue' %}
 	{% assign videoEmbed = item | Attribute:'Podcast_VimeoPlayer','RawValue' %}
 	{% assign audioLink = item | Attribute:'Podcast_Audio','RawValue' %}
+	{% assign audiouploadLink = item | Attribute:'Podcast_Audioupload','Url' %}
 	{% assign notesLink = item | Attribute:'Podcast_SermonNotes','RawValue' %}
 	{% assign subtitle = item | Attribute:'Podcast_SubTitle','RawValue' %}
 	{% assign onscreen = item | Attribute:'Podcast_OnscreenNotes','RawValue' %}
@@ -37,7 +38,9 @@
 								<a href="{{ videoLink }}" class="list-group-item"><i class="fa fa-film"></i> Video</a>
 							{% endif %}
 							
-							{% if audioLink != '' %}
+							{% if audiouploadLink != '' %}
+								<a href="{{ audiouploadLink }}" class="list-group-item"><i class="fa fa-volume-up"></i> Audio</a>
+							{% elseif audioLink != '' %}
 								<a href="{{ audioLink }}" class="list-group-item"><i class="fa fa-volume-up"></i> Audio</a>
 							{% endif %}
 
