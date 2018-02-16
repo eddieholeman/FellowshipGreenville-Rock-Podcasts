@@ -45,16 +45,16 @@
 								<a href="{{ audioLink }}" class="list-group-item"><i class="fa fa-volume-up"></i> Audio</a>
 							{% endif %}
 
-                            {% if notesLink != '' %}
-								<a href="{{ notesLink }}" class="list-group-item"><i class="fa fa-file-text-o"></i> Sermon Notes</a>
-                            {% elseif sermonnotesupload != '' %}
+                            {% if sermonnotesupload != '' %}
 								<a href="{{ sermonnotesupload }}" class="list-group-item"><i class="fa fa-file-text-o"></i> Sermon Notes</a>
+                            {% elseif notesLink != '' %}
+								<a href="{{ notesLink }}" class="list-group-item"><i class="fa fa-file-text-o"></i> Sermon Notes</a>
 							{% endif %}
 							
-                            {% if onscreen != '' %}
-								<a href="{{ onscreen }}" class="list-group-item"><i class="fa fa-file-text-o"></i> Onscreen Notes</a>
-							{% elseif onscreennotesupload != '' %}
+                            {% if onscreennotesupload != '' %}
 								<a href="{{ onscreennotesupload }}" class="list-group-item"><i class="fa fa-file-text-o"></i> Onscreen Notes</a>
+							{% elseif onscreen != '' %}
+								<a href="{{ onscreen }}" class="list-group-item"><i class="fa fa-file-text-o"></i> Onscreen Notes</a>
                             {% endif %}
 							
 						</div>
