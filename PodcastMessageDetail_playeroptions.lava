@@ -43,9 +43,12 @@
 			<div class="col-md-4">
 				{% if videoLink != '' or audioLink != '' or notesLink != '' or onscreen != '' or audioupload != '' or sermonnotesupload != '' or onscreennotesupload != '' %}
 					<div class="panel panel-default">
-
+						<div class="panel-heading">Downloads &amp; Resources</div>
 						<div class="list-group">
 							
+							{% if videoLink != '' %}
+								<a href="{{ videoLink }}" class="list-group-item"><i class="fa fa-film"></i> Video</a>
+							{% endif %}
 							
 							{% if audiouploadLink != '' %}
 								<a href="{{ audiouploadLink }}" class="list-group-item"><i class="fa fa-volume-up"></i> Audio</a>
